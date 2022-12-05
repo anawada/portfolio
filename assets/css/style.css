@@ -1,0 +1,32 @@
+:root{
+    --dark: #000000;
+    --blue: #270082;
+    --purple: #d474f1;
+    --pink: #FA58B6
+}
+
+body{
+    background-color: var(--purple);
+    color: var(--dark);
+    font-family: 'Encode Sans', sans-serif;
+}
+
+nav{
+    list-style-type: none;
+    display: inline;
+}
+
+nav h1{
+
+}
+
+li{
+    display: inline;
+    float: right;
+}
+
+#page-selection{
+    display: grid;
+    grid-template-rows: 25% 25% 25%;
+    grid-template-columns: 200px 200px 200px;
+}
