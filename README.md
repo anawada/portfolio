@@ -8,7 +8,7 @@ Deployed application: anawada.github.io/portfolio/
 
 ## Overview
 
-![](../portfolio/assets/images/Screenshot%202022-12-06%20at%2018.44.05.png)
+![Screenshot](./assets/images/Screenshot%202022-12-06%20at%2018.44.05.png)
 
 
 ## License
