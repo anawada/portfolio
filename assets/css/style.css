@@ -1,27 +1,28 @@
 :root {
-  --dark: #000000;
-  --blue: #270082;
-  --purple: #d474f1;
-  --pink: #fa58b6;
-  --gray: #333333;
-  --white: #ffffff;
+  --primary: #C2E5FF;
+  --darker: #034c83;
+  --secondary: #FF85B4;
+  --bright: #FFE2AD;
+  --black: #02040F;
+  --white: #FFFFFF;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Encode Sans", sans-serif;
 }
 
 body {
-  background-color: var(--purple);
-  color: var(--dark);
+  background-color: var(--primary);
+  color: var(--black);
   font-family: "Encode Sans", sans-serif;
 }
 
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--gray);
+  background-color: var(--darker);
   margin-bottom: 10px;
   padding: 10px;
   margin: 0;
@@ -29,7 +30,7 @@ header {
 
 header a {
   float: right;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   margin-right: 10px;
   padding-top: 15px;
@@ -52,16 +53,16 @@ section {
 }
 
 a:hover {
-  color: var(--pink);
+  color: var(--secondary);
 }
 
 h1 {
-  font-family: ‘Poppins’, sans-serif;
+  font-family: "Encode Sans", sans-serif;
   font-size: 48px;
 }
-.avatar {
+.avatar, h1 {
   font-size: 20px;
-  font-weight: bold;
+  color: var(--darker);
 }
 
 .pic {
@@ -71,14 +72,14 @@ h1 {
   border-radius: 100%;
 }
 
-#projects{
-    padding: 20px;
+#projects, h2{
+    padding: 20px 0px 20px 20px;
 }
 
 .wrapper {
   display: grid;
   gap: 20px;
-  grid-template-rows: 400px 200px;
+  grid-template-rows: 200px 200px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "pj1 pj1"
@@ -100,16 +101,14 @@ h1 {
 #contact {
   text-align: center;
   padding: 5px;
-  background-color: var(--gray);
+  background-color: var(--darker);
   color: var(--white);
   padding: 10px;
 }
 
 #contact i{
-    color: var(--white);
-    padding: 20px;
+  color: var(--white);
 }
-
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   h1 {
