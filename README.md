@@ -9,11 +9,9 @@ Deployed application: anawada.github.io/portfolio/
 ## Overview
 
 
-
-
 ![screenshot](./assets/images/screenshot.png)
 
 
 ## License
 
-Non
+None
