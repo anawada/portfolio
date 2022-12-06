@@ -1,120 +1,139 @@
-:root{
-    --dark: #000000;
-    --blue: #270082;
-    --purple: #d474f1;
-    --pink: #FA58B6;
+:root {
+  --primary: #C2E5FF;
+  --darker: #034c83;
+  --secondary: #FF85B4;
+  --bright: #FFE2AD;
+  --black: #02040F;
+  --white: #FFFFFF;
 }
 
-body{
-    background-color: var(--purple);
-    color: var(--dark);
-    font-family: 'Encode Sans', sans-serif;
-    margin: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Encode Sans", sans-serif;
 }
 
-header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+body {
+  background-color: var(--primary);
+  color: var(--black);
+  font-family: "Encode Sans", sans-serif;
 }
 
-nav li{
-    list-style-type: none;
-    display: inline;
-    padding-left: 5px;
-    text-align: end;
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--darker);
+  margin-bottom: 10px;
+  padding: 10px;
+  margin: 0;
 }
 
-hr{
-    width: 10%;
-    border-style: none;
-    border-top-style: dotted;
-    border-width: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
+header a {
+  float: right;
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 10px;
+  padding-top: 15px;
 }
 
-#about{
-    display: flex;
+header h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--white);
 }
 
-#about, h2{
-    display: inline;
+nav li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 10px;
 }
 
-.avatar {
-    width: 100px;
-    height: auto;
-    flex-direction: column;
-    float: left;
-    border-radius: 100%;
-    padding: 10px;
+section {
+  padding: 10px;
 }
 
-#about, p{
-    flex-direction: column;
-    flex-direction: left;
+a:hover {
+  color: var(--secondary);
 }
 
-i{
-    color: var(--dark) ;
+h1 {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 48px;
+}
+.avatar, h1 {
+  font-size: 20px;
+  color: var(--darker);
 }
 
-.wrapper{
-    display: grid;
-    gap: 20px;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "pj1 pj1 pj1"
-                         "pj2 pj3 pj4"
-                         ;    
+.pic {
+  float: left;
+  width: 100px;
+  padding: 20px;
+  border-radius: 100%;
 }
 
-#projects > *:first-child { grid-column: span 3; }
-
-#project-one{
-    grid-area: "pj1";
-    background-image: url("../images/02-portfolio-1.jpg");
+#projects, h2{
+    padding: 20px 0px 20px 20px;
 }
 
-#project-two{
-    grid-area: "pj2";
-    background-image: url("../images/02-portfolio-2.jpg");
-
+.wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "pj1 pj1"
+    "pj2 pj3";
 }
-#project-three{
-    grid-area: "pj3";
-    background-image: url("../images/02-portfolio-3.jpg");
+#project-one {
+  grid-area: pj1;
+  background-image: url("../images/02-portfolio-1.jpg");
 }
-#project-four{
-    grid-area: "pj4";
-    background-image: url("../images/02-portfolio-4.jpg");
+#project-two {
+  grid-area: pj2;
+  background-image: url("../images/02-portfolio-2.jpg");
 }
-
-#contact{
-    text-align: center;
-    padding: 5px;
-}
-
-#contact, p{
-    margin-bottom: 5px;
-}
-
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+#project-three {
+  grid-area: pj3;
+  background-image: url("../images/02-portfolio-3.jpg");
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+#contact {
+  text-align: center;
+  padding: 5px;
+  background-color: var(--darker);
+  color: var(--white);
+  padding: 10px;
 }
 
-@media 
-  (min-device-width: 800px) 
-  and (max-device-width: 1280px) {
+#contact i{
+  color: var(--white);
+}
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: 30px;
   }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  h1 {
+    font-size: 30px;
+  }
+  header a {
+    font-size: 10px;
+  }
+}
+@media (min-device-width: 800px) and (max-device-width: 1280px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  header a {
+    font-size: 10px;
+  }
+}
