@@ -20,24 +20,47 @@ header{
 nav li{
     list-style-type: none;
     display: inline;
-    padding-left: 10px;
+    padding-left: 5px;
+    text-align: end;
+}
+
+#about{
+    display: flex;
+}
+
+#about, h2{
+    display: inline;
+}
+
+.avatar {
+    width: 20vw;
+    height: auto;
+    flex-direction: column;
+    float: left;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+#about, p{
+    flex-direction: column;
+    flex-direction: left;
 }
 
 .wrapper{
     display: grid;
     gap: 20px;
-    grid-template-rows: 250px 250px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "pj1 pj1 pj2"
-                         "pj3 pj4 pj2";    
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "pj1 pj2"
+                         "pj3 pj4"
+                         ;    
 }
 
 #project-one{
     grid-area: "pj1";
     background-image: url("../images/02-portfolio-1.jpg");
-    border: solid 1px;
-    border-color: var(--dark);
 }
+
 #project-two{
     grid-area: "pj2";
     background-image: url("../images/02-portfolio-2.jpg");
@@ -51,6 +74,9 @@ nav li{
     grid-area: "pj4";
     background-image: url("../images/02-portfolio-4.jpg");
 }
+
+
+
 
 @media only screen 
   and (min-device-width: 320px) 
