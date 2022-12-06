@@ -1,120 +1,140 @@
-:root{
-    --dark: #000000;
-    --blue: #270082;
-    --purple: #d474f1;
-    --pink: #FA58B6;
+:root {
+  --dark: #000000;
+  --blue: #270082;
+  --purple: #d474f1;
+  --pink: #fa58b6;
+  --gray: #333333;
+  --white: #ffffff;
 }
 
-body{
-    background-color: var(--purple);
-    color: var(--dark);
-    font-family: 'Encode Sans', sans-serif;
-    margin: 20px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+body {
+  background-color: var(--purple);
+  color: var(--dark);
+  font-family: "Encode Sans", sans-serif;
 }
 
-nav li{
-    list-style-type: none;
-    display: inline;
-    padding-left: 5px;
-    text-align: end;
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--gray);
+  margin-bottom: 10px;
+  padding: 10px;
+  margin: 0;
 }
 
-hr{
-    width: 10%;
-    border-style: none;
-    border-top-style: dotted;
-    border-width: 5px;
-    margin-left: auto;
-    margin-right: auto;
+header a {
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  padding-top: 15px;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 10px;
+}
+
+section {
+  padding: 10px;
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+h1 {
+  font-family: ‘Poppins’, sans-serif;
+  font-size: 48px;
+}
+.avatar {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pic {
+  float: left;
+  width: 100px;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+#projects{
     padding: 20px;
 }
 
-#about{
-    display: flex;
+.wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 400px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "pj1 pj1"
+    "pj2 pj3";
+}
+#project-one {
+  grid-area: pj1;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+#project-two {
+  grid-area: pj2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+#project-three {
+  grid-area: pj3;
+  background-image: url("../images/02-portfolio-3.jpg");
 }
 
-#about, h2{
-    display: inline;
+#contact {
+  text-align: center;
+  padding: 5px;
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 10px;
 }
 
-.avatar {
-    width: 100px;
-    height: auto;
-    flex-direction: column;
-    float: left;
-    border-radius: 100%;
-    padding: 10px;
-}
-
-#about, p{
-    flex-direction: column;
-    flex-direction: left;
-}
-
-i{
-    color: var(--dark) ;
-}
-
-.wrapper{
-    display: grid;
-    gap: 20px;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "pj1 pj1 pj1"
-                         "pj2 pj3 pj4"
-                         ;    
-}
-
-#projects > *:first-child { grid-column: span 3; }
-
-#project-one{
-    grid-area: "pj1";
-    background-image: url("../images/02-portfolio-1.jpg");
-}
-
-#project-two{
-    grid-area: "pj2";
-    background-image: url("../images/02-portfolio-2.jpg");
-
-}
-#project-three{
-    grid-area: "pj3";
-    background-image: url("../images/02-portfolio-3.jpg");
-}
-#project-four{
-    grid-area: "pj4";
-    background-image: url("../images/02-portfolio-4.jpg");
-}
-
-#contact{
-    text-align: center;
-    padding: 5px;
-}
-
-#contact, p{
-    margin-bottom: 5px;
+#contact i{
+    color: var(--white);
+    padding: 20px;
 }
 
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-}
-
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
-
-@media 
-  (min-device-width: 800px) 
-  and (max-device-width: 1280px) {
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  h1 {
+    font-size: 30px;
   }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  h1 {
+    font-size: 30px;
+  }
+  header a {
+    font-size: 10px;
+  }
+}
+@media (min-device-width: 800px) and (max-device-width: 1280px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  header a {
+    font-size: 10px;
+  }
+}
