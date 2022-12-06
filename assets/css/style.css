@@ -20,26 +20,67 @@ header{
 nav li{
     list-style-type: none;
     display: inline;
-    padding-left: 10px;
+    padding-left: 5px;
+    text-align: end;
+}
+
+hr{
+    width: 10%;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+#about{
+    display: flex;
+}
+
+#about, h2{
+    display: inline;
+}
+
+.avatar {
+    width: 100px;
+    height: auto;
+    flex-direction: column;
+    float: left;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+#about, p{
+    flex-direction: column;
+    flex-direction: left;
+}
+
+i{
+    color: var(--dark) ;
 }
 
 .wrapper{
     display: grid;
     gap: 20px;
-    grid-template-rows: 200px 200px ;
-    grid-template-columns: 1fr 1fr;
-    grid-area: "pj1 pj2"
-               "pj3 pj4";
-              
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "pj1 pj1 pj1"
+                         "pj2 pj3 pj4"
+                         ;    
 }
+
+#projects > *:first-child { grid-column: span 3; }
 
 #project-one{
     grid-area: "pj1";
     background-image: url("../images/02-portfolio-1.jpg");
 }
+
 #project-two{
     grid-area: "pj2";
     background-image: url("../images/02-portfolio-2.jpg");
+
 }
 #project-three{
     grid-area: "pj3";
@@ -50,11 +91,20 @@ nav li{
     background-image: url("../images/02-portfolio-4.jpg");
 }
 
+#contact{
+    text-align: center;
+    padding: 5px;
+}
+
+#contact, p{
+    margin-bottom: 5px;
+}
+
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-
 }
 
 @media screen 
