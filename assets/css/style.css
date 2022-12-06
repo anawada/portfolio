@@ -24,7 +24,15 @@ nav li{
     text-align: end;
 }
 
-
+hr{
+    width: 10%;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
 
 #about{
     display: flex;
@@ -35,7 +43,7 @@ nav li{
 }
 
 .avatar {
-    width: 20vw;
+    width: 100px;
     height: auto;
     flex-direction: column;
     float: left;
@@ -46,6 +54,10 @@ nav li{
 #about, p{
     flex-direction: column;
     flex-direction: left;
+}
+
+i{
+    color: var(--dark) ;
 }
 
 .wrapper{
@@ -79,14 +91,20 @@ nav li{
     background-image: url("../images/02-portfolio-4.jpg");
 }
 
+#contact{
+    text-align: center;
+    padding: 5px;
+}
 
+#contact, p{
+    margin-bottom: 5px;
+}
 
 
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-
 }
 
 @media screen 
