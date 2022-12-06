@@ -8,8 +8,7 @@ Deployed application: anawada.github.io/portfolio/
 
 ## Overview
 
-
-![screenshot](./assets/images/screenshot.png)
+<img width="1448" alt="screenshot" src="https://user-images.githubusercontent.com/108739635/205999441-2f8368ed-367c-4e5b-8974-c234b4f51866.png">
 
 
 ## License
