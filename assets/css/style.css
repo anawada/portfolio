@@ -1,10 +1,10 @@
 :root {
-  --primary: #C2E5FF;
+  --primary: #c2e5ff;
   --darker: #034c83;
-  --secondary: #FF85B4;
-  --bright: #FFE2AD;
-  --black: #02040F;
-  --white: #FFFFFF;
+  --secondary: #ff85b4;
+  --bright: #ffe2ad;
+  --black: #02040f;
+  --white: #ffffff;
 }
 
 * {
@@ -14,15 +14,15 @@
 }
 
 body {
-  background-color: var(--primary);
-  color: var(--black);
-  font-family: "Encode Sans", sans-serif;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--darker);
+  background-color: var(--secondary);
   margin-bottom: 10px;
   padding: 10px;
   margin: 0;
@@ -48,6 +48,12 @@ nav li {
   padding-left: 10px;
 }
 
+main {
+  color: var(--black);
+  font-family: "Encode Sans", sans-serif;
+  z-index: 10;
+}
+
 section {
   padding: 10px;
 }
@@ -60,7 +66,8 @@ h1 {
   font-family: "Encode Sans", sans-serif;
   font-size: 48px;
 }
-.avatar, h1 {
+.avatar,
+h1 {
   font-size: 20px;
   color: var(--darker);
 }
@@ -72,8 +79,9 @@ h1 {
   border-radius: 100%;
 }
 
-#projects, h2{
-    padding: 20px 0px 20px 20px;
+#projects,
+h2 {
+  padding: 20px 0px 20px 20px;
 }
 
 .wrapper {
@@ -85,6 +93,7 @@ h1 {
     "pj1 pj1"
     "pj2 pj3";
 }
+
 #project-one {
   grid-area: pj1;
   background-image: url("../images/02-portfolio-1.jpg");
@@ -106,7 +115,7 @@ h1 {
   padding: 10px;
 }
 
-#contact i{
+#contact i {
   color: var(--white);
 }
 
