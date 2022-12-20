@@ -1,9 +1,9 @@
 :root {
-  --primary: #c2e5ff;
-  --darker: #034c83;
-  --secondary: #ff85b4;
-  --bright: #ffe2ad;
-  --black: #02040f;
+  --primary: #FEFCF3;
+  --darker: #F5EBE0;
+  --secondary: #F0DBDB;
+  --bright: #DBA39A;
+  --text: #35240e;
   --white: #ffffff;
 }
 
@@ -22,7 +22,7 @@ body {
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--secondary);
+  background-color: var(--bright);
   margin-bottom: 10px;
   padding: 10px;
   margin: 0;
@@ -49,7 +49,7 @@ nav li {
 }
 
 main {
-  color: var(--black);
+  color: var(--text);
   font-family: "Encode Sans", sans-serif;
   z-index: 10;
 }
@@ -66,15 +66,22 @@ h1 {
   font-family: "Encode Sans", sans-serif;
   font-size: 48px;
 }
+
 .avatar,
 h1 {
   font-size: 20px;
-  color: var(--darker);
+  color: var(--text);
+}
+
+.flex{
+  display: grid;
+  grid-template-columns: 25% 70%;
+  align-items: center;
+  
 }
 
 .pic {
-  float: left;
-  width: 100px;
+  width: 60%;
   padding: 20px;
   border-radius: 100%;
 }
@@ -82,16 +89,29 @@ h1 {
 #projects,
 h2 {
   padding: 20px 0px 20px 20px;
+  text-decoration: none;
 }
 
 .wrapper {
   display: grid;
-  gap: 20px;
+  gap: 1em;
   grid-template-rows: 200px 200px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "pj1 pj1"
-    "pj2 pj3";
+    "pj1 pj2"
+    "pj1 pj3";
+}
+
+.card{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: 6px 10px 17px 0px #bc5c39;
+}
+
+.card:hover {
+  box-shadow: 6px 10px 17px 0px #42281E;
 }
 
 #project-one {
@@ -110,13 +130,22 @@ h2 {
 #contact {
   text-align: center;
   padding: 5px;
-  background-color: var(--darker);
-  color: var(--white);
+  background-color: var(--bright);
+  color: var(--text);
   padding: 10px;
 }
 
+#contact p{
+  padding-bottom: 20px;
+}
+
 #contact i {
-  color: var(--white);
+  color: var(--text);
+  padding: 5px;
+}
+
+#contact i:hover {
+  color: var(--secondary);
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
